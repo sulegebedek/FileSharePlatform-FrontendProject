@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,600,700);
+* {
+  box-sizing: border-box;
+}
+*::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: block;
+  position: relative;
+  z-index: 0;
+  background-image: linear-gradient(35deg, #ccc, #e9e9e9);
+  font-family: "Ubuntu";
+}
+body main {
+  width: 100%;
+  max-width: 960px;
+  margin: 50px auto;
+  position: relative;
+  display: block;
+  z-index: 1;
+}
+body main p#inspired-by {
+  text-align: center;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body main a {
+  text-decoration: none;
+  color: #e67e22;
+}
+
+.upload {
+  width: 520px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+}
+.upload h1, .upload p {
+  margin: 0;
+}
+.upload .upload-field {
+  width: 75%;
+  height: 100%;
+  background-image: linear-gradient(15deg, #8e44ad, #9b59b6);
+  border-radius: 5px;
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #a66bbe;
+  box-shadow: 0px 10px 40px #8e44ad;
+  pointer-events: hover;
+  cursor: pointer;
+  -webkit-animation: fadeInUp 1s;
+          animation: fadeInUp 1s;
+}
+.upload .upload-field .icon-field {
+  width: 60%;
+  height: 65%;
+  padding: 10px;
+  border: 4px dashed #a66bbe;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s linear;
+}
+.upload .upload-field .icon-field:hover {
+  transform: scale(1.05);
+}
+.upload .upload-field .icon-field span {
+  font-size: 90px;
+  transform: rotateY(180deg) translateX(20px);
+}
+.upload .upload-field .icon-field p {
+  font-weight: 500;
+}
+.upload .upload-status {
+  position: absolute;
+  display: block;
+  z-index: 5;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 70%;
+  height: 90%;
+  padding: 25px 45px;
+  background-color: #fff;
+  box-shadow: 0px 10px 75px rgba(0, 0, 0, 0.5);
+}
+.upload .upload-status h1 {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  margin: 15px 0px;
+  color: #2c3e50;
+}
+.upload .upload-status .file {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  margin: 8px 0px;
+}
+.upload .upload-status .file .file-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.upload .upload-status .file .file-description .file-name {
+  color: #6e6e6e;
+  font-weight: 500;
+}
+.upload .upload-status .file .file-description .file-size {
+  font-size: 13px;
+  text-transform: lowercase;
+  color: #93e7b6;
+}
+.upload .upload-status .file .file-status {
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+.upload .upload-status .file .file-status .status-field {
+  background-color: #e9e9e9;
+  height: 5px;
+  width: 100%;
+  border-radius: 2.5px;
+  position: relative;
+  overflow: hidden;
+}
+.upload .upload-status .file .file-status .status-field .status-line {
+  transition: background-image 0.2s linear;
+  max-width: 100%;
+  min-width: 1%;
+  height: 100%;
+  background-color: #9b59b6;
+  background-image: linear-gradient(0deg, #8e44ad 50%, #9b59b6 50%);
+  -webkit-animation: loading 1.5s;
+          animation: loading 1.5s;
+}
+.upload .upload-status .file:hover .file-status .status-field .status-line {
+  background-image: linear-gradient(0deg, #d35400 50%, #e67e22 50%);
+}
+.upload .upload-status form {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  display: block;
+}
+.upload .upload-status form input[type=text] {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  padding: 10px 10px;
+  padding-right: 0px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+.upload .upload-status form input[type=text]:focus, .upload .upload-status form input[type=text]:active {
+  border: 1px solid #9b59b6;
+  outline: 0;
+}
+.upload .upload-status form input[type=button] {
+  background-color: #9b59b6;
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  display: block;
+  position: absolute;
+  margin-top: 2px;
+  height: 36px;
+  width: 80px;
+  top: 0;
+  right: 0;
+  transition: transform 0.15s ease-in-out, box-shadow 0.35s linear, height 0s linear, margin-top 0s linear, width 0s linear;
+  transform: translateX(25px);
+  box-shadow: 0px 5px 15px rgba(142, 68, 173, 0.8);
+}
+.upload .upload-status form input[type=button]:active, .upload .upload-status form input[type=button]:focus {
+  border: 0;
+  outline: 0;
+}
+.upload .upload-status form input[type=button].focus-out {
+  transform: translateX(0px);
+  box-shadow: 0px 5px 15px transparent;
+}
+.upload .upload-status form input[type=button]:hover {
+  height: 40px;
+  margin-top: 0px;
+  width: 80px;
+}
+.choose{
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  border-radius: 15px;
+  margin-left: 20px;
+  height: 35px;
+  margin-top: 0px;
+  width: 150px;
+}
+
+input[type=file]::file-selector-button {
+  height: 30px;
+  width: 100px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 2px 12px;
+  cursor: pointer;
+}
+
+
+@-webkit-keyframes loading {
+  from {
+    max-width: 0%;
+  }
+  20% {
+    max-width: 40%;
+  }
+  60% {
+    max-width: 60%;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes loading {
+  from {
+    max-width: 0%;
+  }
+  20% {
+    max-width: 40%;
+  }
+  60% {
+    max-width: 60%;
+  }
+  to {
+    max-width: 100%;
+  }
+}
