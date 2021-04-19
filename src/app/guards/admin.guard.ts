@@ -22,7 +22,7 @@ export class AdminGuard implements CanActivate {
         return true;
       }
       else {
-        this.router.navigate(["cars"]);
+        this.router.navigate(["file"]);
         this.toastrService.error("You aren't authorized to do this");
         return false;
       }

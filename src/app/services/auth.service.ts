@@ -63,19 +63,13 @@ export class AuthService {
     return this.userId;
   }
 
-  catchUser() {
-    this.userService.getUserById(this.userId).subscribe(response => {
-      this.loggedUser = response.data;
-    })
-  }
-
   getUserName(){
     return this.jwt.decodeToken(this.getToken()?.toString())["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"];
   }
 
   getUserRoles(){
     if(this.getToken() != null){
-      if (!('http://schemas.microsoft.com/ws/2008/06/identity/claims/role' in this.jwt.decodeToken(this.getToken()?.toString()))){
+      if (!('c' in this.jwt.decodeToken(this.getToken()?.toString()))){
         return "User";
       }
       return this.jwt.decodeToken(this.getToken()?.toString())["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];

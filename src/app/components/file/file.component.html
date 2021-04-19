@@ -1,36 +1,201 @@
+<!-- Display files -->
 <main>
-    <br><br><br>
-    <div class="upload">
-      <div class="upload-field">
-        <div class="icon-field"><span class="fa fa-file-o"></span>
-          <p>Drag your files here</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6	col-md-4	col-lg-3	col-xl-2 fileUploadBox">
+        <a onclick="myFunction()">
+        <div class="fileUpload"><i class="fa fa-cloud-upload fa-5x"></i></div>
+        <div><label>Upload a file</label></div>
+        </a>
+      </div>
+      <div class="col-12 col-sm-6	col-md-4	col-lg-3	col-xl-2 fileBox">
+        <div class="fileImage"><i class="fa fa-file fa-4x"></i></div>
+        <div class="fileTxt">File Name</div>
+        <div class="fileTxt">File Type</div>
+        <div class="fileTxt">Uploaded By</div>
+        <div class="fileTxt">Record No</div>
+        <div class="fileButtons">
+          <a onclick="downloadFunction()"><i class="fa fa-download fa-lg"></i></a>
+          <a onclick="editFunction()"><i class="fa fa-edit fa-lg"></i></a>
+          <a onclick="deleteFunction()"><i class="fa fa-trash fa-lg"></i></a>
         </div>
       </div>
-      <div class="upload-status">
-        <h1>File Share</h1>
+      <div class="col-12 col-sm-6	col-md-4	col-lg-3	col-xl-2 fileBox">
+        <div class="fileImage"><i class="fa fa-file fa-4x"></i></div>
+        <div class="fileTxt">File Name</div>
+        <div class="fileTxt">File Type</div>
+        <div class="fileTxt">Uploaded By</div>
+        <div class="fileTxt">Record No</div>
+        <div class="fileButtons">
+          <a onclick="downloadFunction()"><i class="fa fa-download fa-lg"></i></a>
+          <a onclick="editFunction()"><i class="fa fa-edit fa-lg"></i></a>
+          <a onclick="deleteFunction()"><i class="fa fa-trash fa-lg"></i></a>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6	col-md-4	col-lg-3	col-xl-2 fileBox">
+        <div class="fileImage"><i class="fa fa-file fa-4x"></i></div>
+        <div class="fileTxt">File Name</div>
+        <div class="fileTxt">File Type</div>
+        <div class="fileTxt">Uploaded By</div>
+        <div class="fileTxt">Record No</div>
+        <div class="fileButtons">
+          <a onclick="downloadFunction()"><i class="fa fa-download fa-lg"></i></a>
+          <a onclick="editFunction()"><i class="fa fa-edit fa-lg"></i></a>
+          <a onclick="deleteFunction()"><i class="fa fa-trash fa-lg"></i></a>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6	col-md-4	col-lg-3	col-xl-2 fileBox">
+        <div class="fileImage"><i class="fa fa-file fa-4x"></i></div>
+        <div class="fileTxt">File Name</div>
+        <div class="fileTxt">File Type</div>
+        <div class="fileTxt">Uploaded By</div>
+        <div class="fileTxt">Record No</div>
+        <div class="fileButtons">
+          <a onclick="downloadFunction()"><i class="fa fa-download fa-lg"></i></a>
+          <a onclick="editFunction()"><i class="fa fa-edit fa-lg"></i></a>
+          <a onclick="deleteFunction()"><i class="fa fa-trash fa-lg"></i></a>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6	col-md-4	col-lg-3	col-xl-2 fileBox">
+        <div class="fileImage"><i class="fa fa-file fa-4x"></i></div>
+        <div class="fileTxt">File Name</div>
+        <div class="fileTxt">File Type</div>
+        <div class="fileTxt">Uploaded By</div>
+        <div class="fileTxt">Record No</div>
+        <div class="fileButtons">
+          <a onclick="downloadFunction()"><i class="fa fa-download fa-lg"></i></a>
+          <a onclick="editFunction()"><i class="fa fa-edit fa-lg"></i></a>
+          <a onclick="deleteFunction()"><i class="fa fa-trash fa-lg"></i></a>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6	col-md-4	col-lg-3	col-xl-2 fileBox">
+        <div class="fileImage"><i class="fa fa-file fa-4x"></i></div>
+        <div class="fileTxt">File Name</div>
+        <div class="fileTxt">File Type</div>
+        <div class="fileTxt">Uploaded By</div>
+        <div class="fileTxt">Record No</div>
+        <div class="fileButtons">
+          <a onclick="downloadFunction()"><i class="fa fa-download fa-lg"></i></a>
+          <a onclick="editFunction()"><i class="fa fa-edit fa-lg"></i></a>
+          <a onclick="deleteFunction()"><i class="fa fa-trash fa-lg"></i></a>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6	col-md-4	col-lg-3	col-xl-2 fileBox">
+        <div class="fileImage"><i class="fa fa-file fa-4x"></i></div>
+        <div class="fileTxt">File Name</div>
+        <div class="fileTxt">File Type</div>
+        <div class="fileTxt">Uploaded By</div>
+        <div class="fileTxt">Record No</div>
+        <div class="fileButtons">
+          <a onclick="downloadFunction()"><i class="fa fa-download fa-lg"></i></a>
+          <a onclick="editFunction()"><i class="fa fa-edit fa-lg"></i></a>
+          <a onclick="deleteFunction()"><i class="fa fa-trash fa-lg"></i></a>
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <!-- Share files -->
+  <div id="upload-modal">
+    <div class="container">
+     <div class="row modal-header">
+       <div align="left" class="col-sm-6"> <h4>File Share</h4></div>
+       <div align="right" class="col-sm-6"><a id="closemodal" onclick="myCloseFunction()"><i class="fa fa-window-close fa-lg"></i></a></div>
+     </div>
         <div class="file">
+          <div class="col-sm-12 file-input">
             <input type="file"/>
-          <div class="file"> 
             <div class="file-status">
               <div class="status-field">
                 <div class="status-line" ></div>
               </div>
-              <br>
-              <select class="choose" name="choose">
-                <option value="Public">Public</option>
-                <option value="share only with">Share Only With</option>
-                <option value="Private">Private</option>
-                <option value="choose" selected="selected">Choose</option>
-              </select>
-            </div>
-          </div><br>
-              <form><input type="text" placeholder="Record No" id="upload-field"/></form>
-              <form><input type="text" placeholder="Description" id="upload-field"/></form>
-              <form>
-                <input type="text" placeholder="File Name" id="upload-field"/>
-                <input class="focus-out" type="button" value="FILE SHARE" id="upload-btn"/>
-              </form>
+             </div>
+            <select class="choose" name="choose">
+              <option value="Public">Public</option>
+              <option value="share only with">Share Only With</option>
+              <option value="Private">Private</option>
+              <option value="choose" selected="selected">Choose</option>
+            </select>
+
+            <form>
+              <div><input type="text" placeholder="File Name" id="upload-field"/></div>
+              <div><input type="text" placeholder="Record No" id="upload-field"/></div>
+              <textarea placeholder="Description"></textarea>
+              <div><input onclick="shareFunction()" class="focus-out" type="button" value="FILE SHARE" id="upload-btn"/></div> 
+             </form>
+           </div> 
         </div>  
+    </div>
+   </div>
+
+   <div id="alert-upload-modal">
+    <div class="container">  
+      <div align="right"><a id="closemodal" onclick="uploadCloseFunction()"><i class="fa fa-window-close fa-lg"></i></a></div>
+      <p>File is uploaded successfully.</p>
+    </div>
+  </div>
+
+   <!-- Edit file -->
+   <div id="edit-modal">
+    <div class="container">
+     <div class="row modal-header">
+       <div align="left" class="col-sm-6"> <h5>Edit file</h5></div>
+       <div align="right" class="col-sm-6"><a id="closemodal" onclick="editCloseFunction()"><i class="fa fa-window-close fa-lg"></i></a></div>
+     </div>
+        <div class="file">
+          <div class="col-sm-12 file-input">
+
+            <select class="choose" name="choose">
+              <option value="Public">Public</option>
+              <option value="share only with">Share Only With</option>
+              <option value="Private">Private</option>
+              <option value="choose" selected="selected">Choose</option>
+            </select>
+
+            <form>
+              <div><input type="text" placeholder="File Name" id="upload-field"/></div>  
+              <textarea placeholder="Description"></textarea>
+             </form>
+             <div align="right"><button onclick="saveFunction()">Save</button><button onclick="editCancelFunction()">Cancel</button></div>
+           </div> 
+        </div>  
+    </div>
+   </div>
+
+   <div id="alert-edit-modal">
+    <div class="container">  
+      <div align="right"><a id="closemodal" onclick="editAlertCloseFunction()"><i class="fa fa-window-close fa-lg"></i></a></div>
+      <p>File is edited successfully.</p>
+    </div>
+  </div>
+
+   <!-- Delete file -->
+
+    <div id="delete-modal">
+      <div class="container">
+       <div class="row modal-header">
+         <div align="left" class="col-sm-6"> <h5>Confirm Deletion</h5></div>
+         <div align="right" class="col-sm-6"><a id="closemodal" onclick="deleteCloseFunction()"><i class="fa fa-window-close fa-lg"></i></a></div>
+       </div>
+       <div><p> Are you sure to delete this file?</p></div>
+       <div align="right"><button onclick="okFunction()">OK</button><button onclick="deleteCancelFunction()">Cancel</button></div>
       </div>
     </div>
+   
+  <div id="alert-delete-modal">
+    <div class="container">  
+      <div align="right"><a id="closemodal" onclick="deleteAlertCloseFunction()"><i class="fa fa-window-close fa-lg"></i></a></div>
+      <p>File is deleted!</p>
+    </div>
+  </div>
+
+  <div id="alert-download-modal">
+    <div class="container">  
+      <div align="right"><a id="closemodal" onclick="downloadAlertCloseFunction()"><i class="fa fa-window-close fa-lg"></i></a></div>
+      <p>File had been downloaded successfully.</p>
+    </div>
+  </div>
+
   </main>
+
+  

@@ -5,7 +5,6 @@ import { MainpageComponent } from './components/mainpage/mainpage.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FileComponent } from './components/file/file.component';
 import { UserComponent } from './components/user/user.component';
-import { EditororadminGuard } from './guards/editororadmin.guard';
 import { LogoutGuard } from './guards/logout.guard';
 
 const routes: Routes = [
@@ -13,7 +12,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent , canActivate:[LogoutGuard]},
   { path: 'register', component: RegisterComponent, canActivate: [LogoutGuard] },
   { path: 'file', component: FileComponent, canActivate: [LogoutGuard] },
-  { path: 'admin/users', component: UserComponent , canActivate:[EditororadminGuard]},
+  { path: 'admin/users', component: UserComponent },
   
 ];
 

@@ -6,8 +6,88 @@
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
-  <body>
+  <body onload="closeFunction()" >
     <app-root></app-root>
+     <script>
+        function myFunction() { 
+           $("#upload-modal").show();
+           $("#edit-modal").hide();
+           $("#delete-modal").hide();
+
+         } 
+         function myCloseFunction() { 
+           $("#upload-modal").hide();
+         }
+        function shareFunction() { 
+          $("#alert-upload-modal").show();
+          $("#upload-modal").hide();
+          $("#alert-edit-modal").hide();
+          $("#alert-delete-modal").hide();
+          $("#alert-download-modal").hide();
+        } 
+        function uploadCloseFunction() { 
+          $("#alert-upload-modal").hide();
+        }
+
+
+        function editFunction() { 
+          $("#edit-modal").show();
+          $("#upload-modal").hide();
+          $("#delete-modal").hide();
+        } 
+        function editCloseFunction() { 
+          $("#edit-modal").hide();
+        }
+        function editCancelFunction() { 
+          $("#edit-modal").hide();
+        }
+        function saveFunction() { 
+          $("#edit-modal").hide();
+          $("#alert-edit-modal").show();
+          $("#alert-upload-modal").hide();
+          $("#alert-delete-modal").hide();
+          $("#alert-download-modal").hide();
+        }
+        function editAlertCloseFunction() { 
+          $("#alert-edit-modal").hide();
+        }
+
+
+        function deleteFunction() { 
+          $("#delete-modal").show();
+          $("#upload-modal").hide();
+          $("#edit-modal").hide();
+        } 
+        function deleteCloseFunction() { 
+          $("#delete-modal").hide();
+        }
+        function deleteCancelFunction() { 
+          $("#delete-modal").hide();
+        }
+        function okFunction() { 
+          $("#delete-modal").hide();
+          $("#alert-delete-modal").show();
+          $("#alert-upload-modal").hide();
+          $("#alert-edit-modal").hide();
+          $("#alert-download-modal").hide();
+        }
+        function deleteAlertCloseFunction() { 
+          $("#alert-delete-modal").hide();
+        }
+
+        function downloadFunction() { 
+          $("#alert-download-modal").show();
+          $("#alert-upload-modal").hide();
+          $("#alert-edit-modal").hide();
+          $("#alert-delete-modal").hide();
+        } 
+        function downloadAlertCloseFunction() { 
+          $("#alert-download-modal").hide();
+        }
+      </script>
   </body>
 </html>

@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.authService.login(loginModel).subscribe(async response => {
         this.toastrService.success("You have successfully log in", "Success");
         localStorage.setItem("token", response.data.token);
-        window.location.href = "/cars";
+        window.location.href = "/file";
       }, errorResponse => {
         console.log(errorResponse);
         this.toastrService.error(errorResponse.error)

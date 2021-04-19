@@ -18,7 +18,7 @@ export class LogoutGuard implements CanActivate {
       return true;
     }
     else {
-      this.router.navigate(["/cars"]);
+      this.router.navigate(["/file"]);
       this.toastrService.error("You must log out firstly");
       return false;
     }

@@ -11,7 +11,6 @@ import { User } from '../models/user';
 export class UserService {
 
   apiUrl = "https://localhost:44346/api/users";
-  customerUrl = "https://localhost:44346/api/customers";
 
   constructor(private http: HttpClient) { }
 
@@ -24,7 +23,5 @@ export class UserService {
     let fullPath = this.apiUrl + "/getsingleuserdetail?id=" + id;
     return this.http.get<SingleResponseModel<User>>(fullPath);
   }
-
-  
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { faCar,faHome,faPaperPlane,faCarSide,faCrown,faSignOutAlt,faUser } from '@fortawesome/free-solid-svg-icons';
+import { faHome,faCrown,faSignOutAlt,faUser } from '@fortawesome/free-solid-svg-icons';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 import { ImageService } from 'src/app/services/image.service';
@@ -17,10 +17,7 @@ export class NavbarComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private authService: AuthService, private userService:UserService, private router:Router, private imageService:ImageService) { }
   
-  faCar = faCar;
   faHome = faHome;
-  faPaperPlane = faPaperPlane;
-  faCarSide = faCarSide;
   faCrown = faCrown;
   faSignOutAlt = faSignOutAlt;
   faUser = faUser;
@@ -83,7 +80,7 @@ export class NavbarComponent implements OnInit {
   }
 
   getMainpage() {
-    this.router.navigate(["cars"])
+    this.router.navigate(["file"])
   }
 
   delay(ms:number) {
