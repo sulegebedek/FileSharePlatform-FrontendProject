@@ -20,7 +20,7 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient, private localStorage: LocalStorageService, private userService: UserService) { this.findUser() }
 
-  url = "https://localhost:44346/api/auth"
+  url = "https://localhost:44358/api/auth"
   
   register(loginModel:LoginModel) {
     let fullPath = this.url + "/register"

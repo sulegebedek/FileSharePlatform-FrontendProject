@@ -4,7 +4,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { faHome,faCrown,faSignOutAlt,faUser } from '@fortawesome/free-solid-svg-icons';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
-import { ImageService } from 'src/app/services/image.service';
+import { FileService } from 'src/app/services/file.service';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
 
   selectmenu:[];
 
-  constructor(private activatedRoute: ActivatedRoute, private authService: AuthService, private userService:UserService, private router:Router, private imageService:ImageService) { }
+  constructor(private activatedRoute: ActivatedRoute, private authService: AuthService, private userService:UserService, private router:Router, private fileService:FileService) { }
   
   faHome = faHome;
   faCrown = faCrown;
@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
   userName: string;
   role: string;
 
-  basePath = "https://localhost:44346/";
+  basePath = "https://localhost:44358/";
   
   xx: boolean = true;
 
